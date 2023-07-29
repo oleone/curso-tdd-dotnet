@@ -14,7 +14,7 @@ namespace CursoOnline.DominioTest.Cursos
 
             if (string.IsNullOrEmpty(nome)) throw new ArgumentException("Nome inválido");
 
-            if(cargaHoraria < 1) throw new ArgumentException("Carga horária inálida");
+            if(cargaHoraria < 1) throw new ArgumentException("Carga horária inválida");
 
             if (valor < 1) throw new ArgumentException("Valor inválido");
 

@@ -11,7 +11,7 @@ using System.Drawing;
 
 namespace CursoOnline.DominioTest.Cursos
 {
-    public class CursoTest
+    public class CursoTest : IDisposable
     {
         private readonly ITestOutputHelper _outputHelper;
         private readonly string _nome;
@@ -73,6 +73,11 @@ namespace CursoOnline.DominioTest.Cursos
         {
             Assert.Throws<ArgumentException>(() => new Curso(_nome, _cargaHoraria, _publicoAlvo, valorInvalido))
                 .ComMensagem("Valor inválido");
+        }
+
+        public void Dispose()
+        {
+            _outputHelper.WriteLine("Dispose is runing...");
         }
     }
 }

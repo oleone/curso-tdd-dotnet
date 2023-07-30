@@ -13,7 +13,7 @@ namespace CursoOnline.DominioTest.Utils
             if (exception.Message == mensagem)
                 Assert.True(true);
             else
-                Assert.False(true);
+                Assert.False(true, $"Esperava a mensagem '{mensagem}'");
         }
     }
 }
